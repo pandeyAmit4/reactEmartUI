@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font: 14px "Century Gothic", Futura, sans-serif;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 30px;
+  font-weight: bold;
+  height: 54px;
+  width: 54px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+}
+.clicked {
+  background-color: lightseagreen;
+}
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.game-board {
+  float: left;
+}
+.header {
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 100px;
+  background-color: #136f6a;
+  color: white;
+}
+.iaminlineblock {
+  display: inline-block !important;
+}
+.card {
+  background-color: #ecf1f5;
+  padding-top: 5px;
+}
+.card-deck {
+  margin-bottom: 20px;
+}
+.container{
+  margin-top: 20px;
+}
+.footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #136f6a;
+  color: white;
+  border-bottom: 2px solid gray;
+  bottom: 0;
+}
