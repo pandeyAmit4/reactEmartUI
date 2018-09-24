@@ -25,9 +25,9 @@ class Footer extends Component {
         const year = 2018;
         const copyright = "NoOne";
         return (
-            <footer className="page-footer font-small blue-grey lighten-5">
+            <footer className="page-footer font-small blue-grey theme-bg-cstm lighten-5">
 
-                <div className="footerTop bg-primary">
+                <div className="footerTop theme-bg-cstm">
                     <div className="container">
                         <div className="row py-4 d-flex align-items-center">
                             <div className="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
@@ -57,7 +57,7 @@ class Footer extends Component {
                     </div>
                 </div>
                 <div className="container text-center text-md-left mt-5">
-                    <div className="row mt-3 dark-grey-text">
+                    <div className="row mt-3">
                         <div className="col-md-3 col-lg-4 col-xl-3 mb-4">
                             <h6 className="text-uppercase font-weight-bold">Company name</h6>
                             <hr className="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"/>

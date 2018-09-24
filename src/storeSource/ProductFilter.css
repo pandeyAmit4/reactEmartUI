@@ -13,17 +13,6 @@ xfilter
     box-shadow: 4px 4px 20px transparent;
     z-index: 2;
   }
-  .cd-filter::before {
-    /* top colored bar */
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 50px;
-    width: 100%;
-    background-color: #444444;
-    z-index: 2;
-  }
   .cd-filter form {
     padding: 70px 20px;
   }
@@ -70,7 +59,6 @@ xfilter
     height: 50px;
     line-height: 50px;
     width: 60px;
-    /* image replacement */
     overflow: hidden;
     text-indent: 100%;
     color: transparent;
@@ -163,7 +151,6 @@ xfilter
     -moz-appearance: none;
     -ms-appearance: none;
     -o-appearance: none;
-    appearance: none;
     box-shadow: none;
   }
   .cd-filter-block input[type='search']:focus,
@@ -257,6 +244,7 @@ xfilter
     width: 16px;
     height: 16px;
     left: 0;
+    top: 12px;
   }
   .cd-filter-block .checkbox-label::after,
   .cd-filter-block .radio-label::after {

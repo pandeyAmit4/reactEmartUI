@@ -8,16 +8,16 @@ import Carousel from './storeSource/Carousel';
 import Tile from './storeSource/Tile';
 
 class App extends Component {
-  render() {
-      return (
-          <div>
-              <Header />
-              {/* <Game /> */}
-              <Carousel />
-              <Tile />
-              <Footer />
-          </div>
-      );
-  }
+    render() {
+        return (
+            <div>
+                <Header />
+                {/* <Game /> */}
+                <Carousel />
+                <Tile />
+                <Footer />
+            </div>
+        );
+    }
 }
 export default App;

@@ -5,24 +5,25 @@ import Books from './Books';
 import Pagination from './Pagination';
 import SectionHead from './SectionHead';
 import ProductFilter from './ProductFilter';
-
+import ShoeTile from './ShoeTile'
 class Tile extends Component {
 
     render() {
         const mobileCards = [];
         const bookCards = [];
+        const shoeCards = [];
         Constants.STORE.forEach(function (categ, e) {
             if (categ.category === "mobiles") {
                 categ.lists.forEach(function (product, e) {
                     mobileCards.push(
                         <Smartphone
-                            key={categ.category + e}
+                            key={product.productCode}
                             labels={Constants.Labels}
                             companyName={product.companyName}
                             modelName={product.modelName}
                             warranty={product.warranty}
                             price={product.price}
-                            id={categ.category + e}
+                            id={product.productCode}
                         />
                     );
                 });
@@ -30,40 +31,68 @@ class Tile extends Component {
                 categ.lists.forEach(function (books, e) {
                     bookCards.push(
                         <Books
-                            key={categ.category + e}
+                            key={books.productCode}
                             labels={Constants.Labels}
                             bookTag={books.bookTag}
                             bookName={books.bookName}
                             authorName={books.authorName}
                             edition={books.edition}
                             price={books.price}
-                            id={categ.category + e}
+                            id={books.productCode}
+                        />
+                    );
+                });
+            } else if (categ.category === "shoes") {
+                categ.lists.forEach(function (shoes, e) {
+                    shoeCards.push(
+                        <ShoeTile
+                            key={shoes.productCode}
+                            labels={Constants.Labels}
+                            brand={shoes.brand}
+                            color={shoes.color}
+                            type={shoes.type}
+                            price={shoes.price}
+                            id={shoes.productCode}
                         />
                     );
                 });
             }
         });
         return (
-            <div className="container-fluid row">
-                <div className="sidebar col-md-2">
+            <div className="container-fluid productPage">
+                <div className="sidebar col-md-2 d-none d-sm-none d-md-block">
                     <ProductFilter />
                 </div>
-                <div className="listing col-md-10">
+                <div className="listing col-md-10 col-sm-12">
+                    <div className="productCategory">
                     <SectionHead
-                        Product="Mobile"
+                        Product="Smart Phones"
                     />
                     <div className="row card-deck">
                         {mobileCards}
                     </div>
                     <Pagination />
                     <hr />
+                    </div>
+                    <div className="productCategory">
                     <SectionHead
-                        Product="Book"
+                        Product="Books"
                     />
                     <div className="row card-deck">
                         {bookCards}
                     </div>
                     <Pagination />
+                    <hr />
+                    </div>
+                    <div className="productCategory">
+                    <SectionHead
+                        Product="Shoes"
+                    />
+                    <div className="row card-deck">
+                        {shoeCards}
+                    </div>
+                    <Pagination />
+                    </div>
                 </div>
             </div>
         );

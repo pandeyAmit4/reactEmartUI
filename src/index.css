@@ -19,6 +19,10 @@ ol, ul {
   margin-bottom: 10px;
 }
 
+.productPage {
+  display: flex;
+  flex-wrap: wrap;
+}
 .square {
   background: #fff;
   border: 1px solid #999;
@@ -47,6 +51,7 @@ ol, ul {
   display: flex;
   flex-direction: row;
   margin-left: 10%;
+  margin-top: 50px;
 }
 
 .game-info {
@@ -73,6 +78,25 @@ ol, ul {
 .card-deck {
   margin-bottom: 20px;
 }
+.listing h2 {
+    padding: 5px 15px;
+    font-size: 1.5rem;
+    color: #292727;
+    margin-top: 5px;
+    text-shadow: 0 0 1px;
+    border: 1px solid lightgray;
+    border-bottom: 0;
+}
+.theme-bg-cstm {
+  background-color: black;
+  color: #b7c0c1;
+}
+.theme-bg-cstm-light{
+  background-color: #566a79;
+}
+.sidebar {
+  border-right: 1px solid lightgray;
+}
 .container{
   margin-top: 20px;
 }
@@ -83,4 +107,11 @@ ol, ul {
   color: white;
   border-bottom: 2px solid gray;
   bottom: 0;
+}
+.border-default {
+  border: 1px solid lightgray;
+}
+.card-deck .card {
+  min-width: 250px;
+  margin-top: 10px;
 }

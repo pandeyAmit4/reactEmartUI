@@ -1,40 +1,46 @@
-import React, {Component} from "react"
-
+import React, { Component } from "react";
+import Badge from './storeSource/Badge';
 class Header extends Component {
-    render(){
-        return(
-            <nav className="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
-                <a className="navbar-brand" href="#nogo">Navbar</a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#nogonavbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    render() {
+        return (
+            <nav className="navbar navbar-expand-lg navbar-dark theme-bg-cstm">
+                <a className="navbar-brand" href="#">
+                    <Badge
+                        badgeContent={4}
+                    />
+                </a>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul className="navbar-nav">
-                    <li className="nav-item active">
-                        <a className="nav-link" href="#nogo">Home <span className="sr-only">(current)</span></a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#nogo">Features</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#nogo">Pricing</a>
-                    </li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#nogo" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown link
-                        </a>
-                        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a className="dropdown-item" href="#nogo">Action</a>
-                        <a className="dropdown-item" href="#nogo">Another action</a>
-                        <a className="dropdown-item" href="#nogo">Something else here</a>
-                        </div>
-                    </li>
+
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav mr-auto">
+                        <li className="nav-item active">
+                            <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Link</a>
+                        </li>
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+        </a>
+                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a className="dropdown-item" href="#">Action</a>
+                                <a className="dropdown-item" href="#">Another action</a>
+                                <div className="dropdown-divider"></div>
+                                <a className="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link disabled" href="#">Disabled</a>
+                        </li>
                     </ul>
+                    <form className="form-inline my-2 my-lg-0">
+                        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button className="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
-                <form className="form-inline my-2 my-lg-0">
-                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                    <button className="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-                </form>
             </nav>
         );
     }
