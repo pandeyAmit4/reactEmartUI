@@ -6,15 +6,25 @@ import Pagination from './Pagination';
 import SectionHead from './SectionHead';
 import ProductFilter from './ProductFilter';
 import ShoeTile from './ShoeTile'
+import AddProduct from './AddProduct'
 class Tile extends Component {
-
+    constructor(props){
+        super(props);
+        this.state = {
+            added : false,
+            cartCount: 0
+        }
+    }
+    handleCart() {
+         
+    }
     render() {
         const mobileCards = [];
         const bookCards = [];
         const shoeCards = [];
-        Constants.STORE.forEach(function (categ, e) {
+        Constants.STORE.map(function (categ, e) {
             if (categ.category === "mobiles") {
-                categ.lists.forEach(function (product, e) {
+                categ.lists.map(function (product, e) {
                     mobileCards.push(
                         <Smartphone
                             key={product.productCode}
@@ -28,7 +38,7 @@ class Tile extends Component {
                     );
                 });
             } else if (categ.category === "books") {
-                categ.lists.forEach(function (books, e) {
+                categ.lists.map(function (books, e) {
                     bookCards.push(
                         <Books
                             key={books.productCode}
@@ -43,7 +53,7 @@ class Tile extends Component {
                     );
                 });
             } else if (categ.category === "shoes") {
-                categ.lists.forEach(function (shoes, e) {
+                categ.lists.map(function (shoes, e) {
                     shoeCards.push(
                         <ShoeTile
                             key={shoes.productCode}
@@ -94,6 +104,7 @@ class Tile extends Component {
                     <Pagination />
                     </div>
                 </div>
+                <AddProduct/>
             </div>
         );
     }
